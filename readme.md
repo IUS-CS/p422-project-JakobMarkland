@@ -1,6 +1,6 @@
-# P422 Project (REPLACE ME)
+# Payroll Application
 
-Here, you should put your project proposal. It should be written in english text and describe what you intend to build along with any information necessary. Please use proper markdown formatting. You can find a guide here: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
+For my project I would like to create a theoretical portal for someone to find important employee information. A user could be someone such as a manager or a higher up of an employee. They could use this to view employee information like id, employee number, name, ssn, pay rate, department and manager just give an example. This information could be displayed in a convenient table format for a user. Also, if I have the time allow a user to filter employees by certain options or have a search box where they can type in any value for any of the fields and get the resulting employee. If a user typed a name, they would start to see the results showing up pertaining to their current input. 
 
 Your project should have the following requirements met:
 
