@@ -1,0 +1,30 @@
+<div class="card-employee-table" style="width: 70rem;" >
+  <div class="card">
+    <h3>Employee Table View</h3>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Employee Manager</th>
+        <th scope="col">Employee Department</th>
+        <th scope="col">Employee Payrate</th>
+        <th scope="col">Employee SSN</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of EMPLOYEES; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ employee.employeeId }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.manager }}</td>
+        <td>{{ employee.department }}</td>
+        <td>${{ employee.payrate }}</td>
+        <td>{{ employee.ssn }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
