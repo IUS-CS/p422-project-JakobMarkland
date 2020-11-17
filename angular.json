@@ -73,7 +73,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "payroll-application:build:production"
+              "browserTarget": "payroll-application:build:production",
+              "proxyConfig": "proxy.config.json"
             }
           }
         },

@@ -21,4 +21,5 @@ const isiahRashad = new Employee({
 
 mongoose.connect('mongo://localhost:27017/', {useNewUrlParser: true, useUnifiedTopology: true});
 
-henryAdams.save().catch(err => console.error(err)).then(() => { console.log('saved sampleEmployee')});
+henryAdams.save().catch(err => console.error(err)).then(() => { console.log('saved henryAdams')});
+henryAdams.save().catch(err => console.error(err)).then(() => { console.log('saved isiahRashad')});
