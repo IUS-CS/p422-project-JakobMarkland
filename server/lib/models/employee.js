@@ -9,8 +9,8 @@ const EmployeeSchema = mongoose.Schema({
   ssn: Number,
 });
 
-EmployeeSchema.query.byEmployeeID = function(name) {
-  return this.where({employeeId: name});
+EmployeeSchema.query.byEmployeeID = function(id) {
+  return this.where({employeeId: id});
 }
 
 const Employee = mongoose.model('Employee', EmployeeSchema);

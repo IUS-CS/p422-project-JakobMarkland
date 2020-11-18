@@ -8,7 +8,7 @@ const henryAdams = new Employee({
   department: 'Manufacturing',
   payrate: 12.50,
   ssn: 300901234,
-})
+});
 
 const isiahRashad = new Employee({
   employeeId: 2119252,
@@ -17,9 +17,9 @@ const isiahRashad = new Employee({
   department: 'Inspection',
   payrate: 11.00,
   ssn: 230809012,
-})
+});
 
-mongoose.connect('mongo://localhost:27017/', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/payroll-application', {useNewUrlParser: true, useUnifiedTopology: true});
 
 henryAdams.save().catch(err => console.error(err)).then(() => { console.log('saved henryAdams')});
-henryAdams.save().catch(err => console.error(err)).then(() => { console.log('saved isiahRashad')});
+isiahRashad.save().catch(err => console.error(err)).then(() => { console.log('saved isiahRashad')});

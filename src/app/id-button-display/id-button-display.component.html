@@ -1,0 +1,13 @@
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="selectedEmployee">
+  <label ngbButtonLabel class="btn-primary" *ngFor="let employee of EMPLOYEES">
+    <input ngbButton type="radio" [value]="employee">{{employee.employeeId}}
+  </label>
+</div>
+
+<div *ngIf="selectedEmployee">
+  <app-single-employee-view [employee]="selectedEmployee"></app-single-employee-view>
+</div>
+
+<div *ngIf="!selectedEmployee">
+  No profile selected.
+</div>

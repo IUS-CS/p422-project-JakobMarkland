@@ -13,18 +13,20 @@
         <th scope="col">Employee SSN</th>
       </tr>
       </thead>
+
       <tbody>
       <tr *ngFor="let employee of EMPLOYEES; index as i">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ employee.employeeId }}</td>
-        <td>{{ employee.name }}</td>
-        <td>{{ employee.manager }}</td>
-        <td>{{ employee.department }}</td>
-        <td>${{ employee.payrate }}</td>
-        <td>{{ employee.ssn }}</td>
+        <td (click)="onSelect(employee)">{{ employee.employeeId }}</td>
+        <td (click)="onSelect(employee)">{{ employee.name }}</td>
+        <td (click)="onSelect(employee)">{{ employee.manager }}</td>
+        <td (click)="onSelect(employee)">{{ employee.department }}</td>
+        <td (click)="onSelect(employee)">${{ employee.payrate }}</td>
+        <td (click)="onSelect(employee)">{{ employee.ssn }}</td>
       </tr>
       </tbody>
     </table>
   </div>
 </div>
+
 

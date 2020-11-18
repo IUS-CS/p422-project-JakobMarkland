@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Employee } from '../../data/employee';
 import { EMPLOYEES} from '../../data/employees';
 
@@ -9,8 +9,8 @@ import { EMPLOYEES} from '../../data/employees';
 })
 
 export class SingleEmployeeViewComponent implements OnInit {
+  @Input() employee: Employee;
   Employees = EMPLOYEES;
-  singleEmployee = this.Employees[0];
 
   constructor() {
   }
