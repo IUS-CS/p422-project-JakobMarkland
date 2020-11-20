@@ -10,6 +10,7 @@ import { AddEmployeeViewComponent } from './add-employee-view/add-employee-view.
 import { SingleEmployeeViewComponent } from './single-employee-view/single-employee-view.component';
 import { IdButtonDisplayComponent } from './id-button-display/id-button-display.component';
 import {FormsModule} from '@angular/forms';
+import { EmployeeNavBarComponent } from './employee-nav-bar/employee-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from '@angular/forms';
     EditEmployeeViewComponent,
     AddEmployeeViewComponent,
     SingleEmployeeViewComponent,
-    IdButtonDisplayComponent
+    IdButtonDisplayComponent,
+    EmployeeNavBarComponent
   ],
     imports: [
         BrowserModule,
