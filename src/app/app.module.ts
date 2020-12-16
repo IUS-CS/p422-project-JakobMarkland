@@ -9,8 +9,9 @@ import { EditEmployeeViewComponent } from './edit-employee-view/edit-employee-vi
 import { AddEmployeeViewComponent } from './add-employee-view/add-employee-view.component';
 import { SingleEmployeeViewComponent } from './single-employee-view/single-employee-view.component';
 import { IdButtonDisplayComponent } from './id-button-display/id-button-display.component';
-import {FormsModule} from '@angular/forms';
-import { EmployeeNavBarComponent } from './employee-nav-bar/employee-nav-bar.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,15 @@ import { EmployeeNavBarComponent } from './employee-nav-bar/employee-nav-bar.com
     AddEmployeeViewComponent,
     SingleEmployeeViewComponent,
     IdButtonDisplayComponent,
-    EmployeeNavBarComponent
+    PageNotFoundComponent,
+    HomePageComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         NgbModule,
+        ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

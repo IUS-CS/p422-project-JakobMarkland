@@ -1,5 +1,5 @@
 <div class="card-view-single-employee" style="width: 18rem;">
-  <div class="card">
+  <div *ngIf="!editing" class="card">
     <label>Employee ID:</label>
     <label class="outputLabel">  {{employee.employeeId}}</label>
     <label>Employee Name:</label>
@@ -12,5 +12,11 @@
     <label class="outputLabel">  {{employee.payrate}}</label>
     <label>Employee SSN:</label>
     <label class="outputLabel">  {{employee.ssn}}</label>
+  </div>
+  <div *ngIf="editing">
+    <app-edit-employee-view [employee]="employee" (finishedEditing)="edit()"></app-edit-employee-view>
+  </div>
+  <div>
+    <button type="button" class="btn btn-secondary" (click)="edit()">Edit</button>
   </div>
 </div>

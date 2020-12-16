@@ -1,4 +1,4 @@
-<div class="card-edit-employee" style="width: 18rem;">
+<!--<div class="card-edit-employee" style="width: 18rem;">
   <div class="card">
     <h3>Edit Employee View</h3>
     <div class="employee-manager-form">
@@ -15,4 +15,36 @@
     </div>
     <button type="button" class="btn btn-primary">Update Employee</button>
   </div>
-</div>
+</div>-->
+<form [formGroup]="person" (ngSubmit)="save()">
+  <div class="card">
+    <label>Employee ID:</label>
+    <label class="outputLabel"> <strong>{{employee.employeeId}}</strong></label>
+    <label>Employee Name:</label>
+    <label class="outputLabel"><strong>{{employee.name}}</strong></label>
+    <label>Employee Manager:</label>
+    <label class="outputLabel"> <input id="manager" type="text" formControlName="manager" placeholder="John King"/>
+      <div [hidden]="person.controls.manager.valid || person.controls.manager.pristine" class="alert alert-danger">
+        A valid manager is required.
+      </div>
+    </label>
+    <label>Employee Department:</label>
+    <label class="outputLabel"> <input id="department" type="text" formControlName="department" placeholder="Accounting"/>
+      <div [hidden]="person.controls.department.valid || person.controls.department.pristine" class="alert alert-danger">
+        A valid department is required.
+      </div>
+    </label>
+    <label>Employee Payrate:</label>
+    <label class="outputLabel"> <input id="payrate" type="number" formControlName="payrate" placeholder="14.25"/>
+      <div [hidden]="person.controls.payrate.valid || person.controls.payrate.pristine" class="alert alert-danger">
+        A valid payrate is required.
+      </div>
+    </label>
+    <label>Employee SSN:</label>
+    <label class="outputLabel">  <strong>{{employee.ssn}}</strong></label>
+  </div>
+  <button type="button" class="btn btn-outline-primary" [disabled]="!person.valid" (click)="save()">Save</button>
+  <button type="button" class="btn btn-outline-secondary" (click)="reset()">Reset</button>
+  <button type="button" class="btn btn-outline-secondary" (click)="cancel()">Cancel</button>
+</form>
+

@@ -1,8 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Payroll App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div>
-  <app-employee-nav-bar></app-employee-nav-bar>
-  <app-id-button-display></app-id-button-display>
-  <app-edit-employee-view></app-edit-employee-view>
-  <app-employee-table-view></app-employee-table-view>
-  <app-add-employee-view></app-add-employee-view>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul ngbNav routerLinkActive="active">
+      <li ngbNavItem="homePage">
+        <a ngbNavLink class="btn-dark" routerLink="homePage">Home</a>
+      </li>
+      <li ngbNavItem="idButtonDisplay">
+        <a ngbNavLink class="btn-dark" routerLink="idButtonDisplay">Employee ID's</a>
+      </li>
+      <li ngbNavItem="employeeTableView">
+        <a ngbNavLink class="btn-dark" routerLink="employeeTableView">Employee Table</a>
+      </li>
+      <li ngbNavItem="addEmployeeView">
+        <a ngbNavLink class="btn-dark" routerLink="addEmployeeView">Add Employee</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <hr>
+  <router-outlet></router-outlet>
 </div>
+

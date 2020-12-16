@@ -4,9 +4,16 @@
   </label>
 </div>
 
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="selectedEmployeeId">
+  <label ngbButtonLabel class="btn-primary" *ngFor="let employee2 of employeeData"></label>
+</div>
+
+<hr>
+
 <div *ngIf="selectedEmployee">
   <app-single-employee-view [employee]="selectedEmployee"></app-single-employee-view>
 </div>
+
 
 <div *ngIf="!selectedEmployee">
   No profile selected.
