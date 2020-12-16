@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Employee} from '../../data/employee';
 import { EMPLOYEES} from '../../data/employees';
-import {EmployeeDataService} from '../employee-data.service';
+import {EmployeeDataService} from '../Services/employee-data.service';
 
 @Component({
   selector: 'app-id-button-display',
